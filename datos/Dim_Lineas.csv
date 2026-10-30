@@ -1,0 +1,6 @@
+ID_Linea,Nombre,Seccion,CapacidadKgDia,Nave
+L-01,Recepción y limpieza,Pretratamiento,38000,Nave 1
+L-02,Molienda y batidora,Extracción,30000,Nave 1
+L-03,Decanter centrífugo,Extracción,28000,Nave 1
+L-04,Bodega y maduración,Almacenamiento,20000,Nave 2
+L-05,Envasado y expedición,Acabado,18000,Nave 2

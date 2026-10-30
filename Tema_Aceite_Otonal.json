@@ -1,0 +1,66 @@
+{
+    "name": "Aceite Otoñal Gris",
+    "dataColors": [
+        "#D4AF37",
+        "#C87D55",
+        "#708238",
+        "#B85A38",
+        "#A9B08F",
+        "#D9A05B",
+        "#556B2F",
+        "#8B5A2B"
+    ],
+    "background": "#2F3136",
+    "foreground": "#E0E0E0",
+    "tableAccent": "#C87D55",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#3A3D42"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "title": [
+                    {
+                        "show": true,
+                        "fontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ],
+                "labels": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#E0E0E0"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#2F3136"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ]
+            }
+        }
+    }
+}
