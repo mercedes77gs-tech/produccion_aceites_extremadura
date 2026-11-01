@@ -6,6 +6,8 @@ Se busca una imagen que represente a la empresa para lograr un .json corporativo
 Se crean tarjetas, sliders, graficos, matrices, tablas, segmentacion de datos, varias paginas apoyadas en la de aterrizaje, algunas paginas ocultas para solo mostrar la informacion relevante, 
 botones de llamada para vincular paginas y navegar directamente.
 Hay dos paginas con informacion sobre los pasos y tips de errores o cambios.
+<img width="1437" height="785" alt="DAHSBOARD_EXTREMAOLIVA_PBI" src="https://github.com/user-attachments/assets/63391e58-6995-409c-94e0-3476f304e5be" />
+
 <img width="1353" height="820" alt="Captura de pantalla 2026-10-30 223341" src="https://github.com/user-attachments/assets/dcc4e4fe-a7cf-4b18-9182-326316294e72" />
 <img width="1332" height="762" alt="Captura de pantalla 2026-10-30 223321" src="https://github.com/user-attachments/assets/0bf5155d-4281-4fa1-840f-eb0522f56424" />
 <img width="1332" height="737" alt="Captura de pantalla 2026-10-30 223142" src="https://github.com/user-attachments/assets/032a0328-8754-4fdf-a2bb-deb2681097d7" />
