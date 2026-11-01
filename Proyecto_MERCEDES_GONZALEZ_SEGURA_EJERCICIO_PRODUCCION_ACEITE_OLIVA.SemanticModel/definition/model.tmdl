@@ -1,0 +1,25 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Dim_CentrosCoste","Dim_Lineas","Dim_Turnos","Fact_Produccion"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dim_CentrosCoste
+ref table Dim_Lineas
+ref table Fact_Produccion
+ref table DateTableTemplate_5cc1602b-8efd-410b-adbc-6ee087940597
+ref table Dim_Turnos
+ref table Calendario
+ref table LocalDateTable_14c75e5a-4a17-4c43-8273-4d645924d222
+
+ref cultureInfo es-ES
+

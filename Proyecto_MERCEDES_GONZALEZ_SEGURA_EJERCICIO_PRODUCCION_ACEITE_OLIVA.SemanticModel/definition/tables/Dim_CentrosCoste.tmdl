@@ -1,0 +1,50 @@
+table Dim_CentrosCoste
+	lineageTag: 88e401b6-8fc5-4a09-aa6f-252d1c245d61
+
+	column ID_CentroCoste
+		dataType: string
+		lineageTag: 9dce2432-2ed1-4322-a9b2-d15e5019c05c
+		summarizeBy: none
+		sourceColumn: ID_CentroCoste
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: e2381756-3d0a-4b59-b478-de1bf7af9b85
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nave
+		dataType: string
+		lineageTag: 2157bd56-cd86-418f-b873-4539526f6764
+		summarizeBy: none
+		sourceColumn: Nave
+
+		annotation SummarizationSetBy = Automatic
+
+	column Responsable
+		dataType: string
+		lineageTag: 33f5b6ec-db75-4007-ad19-54cb051438d8
+		summarizeBy: none
+		sourceColumn: Responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_CentrosCoste = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("Z:\MIS TRABAJOS\ADAMS PBI 27102026\PRODUCCION\datos\Dim_CentrosCoste.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_CentroCoste", type text}, {"Nombre", type text}, {"Nave", type text}, {"Responsable", type text}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

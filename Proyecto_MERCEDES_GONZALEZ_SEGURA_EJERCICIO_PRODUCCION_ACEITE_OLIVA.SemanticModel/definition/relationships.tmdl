@@ -1,0 +1,21 @@
+relationship AutoDetected_70074faa-c59e-4000-9674-252e6417150b
+	fromColumn: Fact_Produccion.ID_Linea
+	toColumn: Dim_Lineas.ID_Linea
+
+relationship AutoDetected_a69e624b-1601-4afe-8716-9710244e75ff
+	fromColumn: Fact_Produccion.ID_CentroCoste
+	toColumn: Dim_CentrosCoste.ID_CentroCoste
+
+relationship 4f4a6064-ebf9-e357-cd3c-59b08ad537cf
+	fromColumn: Fact_Produccion.ID_Turno
+	toColumn: Dim_Turnos.ID_Turno
+
+relationship e762f3a1-83d9-44eb-85a5-91f732db19a8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: LocalDateTable_14c75e5a-4a17-4c43-8273-4d645924d222.Date
+
+relationship fd668479-a7fb-5314-2fc7-6e999630115b
+	fromColumn: Fact_Produccion.Fecha
+	toColumn: Calendario.Date
+

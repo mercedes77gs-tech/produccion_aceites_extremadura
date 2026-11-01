@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Proyecto_MERCEDES_GONZALEZ_SEGURA_EJERCICIO_PRODUCCION_ACEITE_OLIVA"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e13467a4-ac14-4c03-a92e-3376e3943de1"
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e7ec66c2b1c4184d6280",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 1068.3333333333335,
+    "width": 1883.3333333333335,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "INFORME DEL PROYECTO – ACEITES EXTREMADURA",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PARTE 1. PREPARACIÓN Y CONSTRUCCIÓN DE LA PÁGINA MERMA",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. Importación y revisión de los datos",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El trabajo comienza con la importación a Power BI de los datos facilitados para el proyecto.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se revisan las tablas y sus columnas para comprobar que los datos y sus formatos son adecuados antes de comenzar a crear las visualizaciones. Esta revisión incluye tipos de datos, formatos numéricos, decimales, porcentajes y otros aspectos necesarios para trabajar correctamente con la información.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Las tablas del modelo se organizan en dimensiones y una tabla de hechos, que recoge los registros de producción.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. Preparación de los datos y tabla calendario",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se incorpora una tabla calendario para poder realizar análisis temporales.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La tabla incluye los campos:",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Año.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Mes.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Mes_Num.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Trimestre.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se establece el orden cronológico de los meses utilizando el campo numérico Mes_Num, evitando que Power BI los ordene alfabéticamente.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "También se revisan los formatos de las columnas y se realizan los ajustes necesarios para que los datos puedan utilizarse correctamente en los cálculos y visualizaciones.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3. Construcción del modelo de datos",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se trabaja con las tablas del proyecto:",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Fact_Produccion.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dim_Lineas.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dim_CentrosCoste.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dim_Turnos.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Calendario.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se establecen las relaciones entre las tablas para conectar los registros de producción con sus correspondientes líneas, centros de coste, turnos y fechas.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "4. Creación de medidas",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se crean las medidas necesarias para obtener los principales indicadores del proyecto, entre ellos:",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Kilogramos procesados.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Kilogramos de merma.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Porcentaje de merma.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Rendimiento.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Variación interanual de la merma (YoY).",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Estas medidas permiten reutilizar los cálculos en los distintos objetos visuales y mantener la coherencia de los resultados al aplicar filtros.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "5. Construcción de la página Merma",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Una vez preparado el modelo, se crea la primera página del informe, denominada ",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "Merma",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se incorporan los segmentadores para filtrar la información por año y mes, centro de coste y sección.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se añaden tarjetas para mostrar los indicadores principales y se construyen los objetos visuales previstos:",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Gráfico de anillo para representar la merma total por nave.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Matriz para mostrar la merma por sección, línea y turno, con subtotales y total general.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se configura el formato de los valores numéricos y porcentajes, así como los encabezados de los objetos visuales.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "6. Formato y presentación",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se establece una línea visual común para el proyecto, personalizando colores, fondos, textos y elementos gráficos.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se incorporan los títulos de las páginas y un indicador de último refresco, con el objetivo de identificar cuándo se ha actualizado la información.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Corrección de encabezado:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": " durante la revisión de la página Merma se detectó que la matriz mostraba el nombre «Total Kg Procesados», aunque el cálculo utilizado correspondía a la merma. Se corrigió el nombre visible del campo en ese objeto visual para que coincidiera con la información representada.",
+                    "textStyle": {
+                      "fontFamily": "Times New Roman, serif",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

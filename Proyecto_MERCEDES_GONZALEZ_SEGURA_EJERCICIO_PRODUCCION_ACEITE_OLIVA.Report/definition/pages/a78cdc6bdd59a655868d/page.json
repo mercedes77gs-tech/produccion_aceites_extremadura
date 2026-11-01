@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a78cdc6bdd59a655868d",
+  "displayName": "MERMA",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c8d9c274210040d0e40c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Turnos"
+              }
+            },
+            "Property": "Nombre"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough",
+        "isHiddenInViewMode": true
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "c39650375b2bc34eb4d2",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "e808b75f85a320e0a824",
+        "boundFilter": "c8d9c274210040d0e40c",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Turnos"
+              }
+            },
+            "Property": "Nombre"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0.2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

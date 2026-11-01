@@ -1,0 +1,61 @@
+table Dim_Turnos
+	lineageTag: 7ef1eb8d-1a66-4a53-b900-4a9172e371d4
+
+	column ID_Turno
+		dataType: string
+		lineageTag: 6b89a0ad-6833-41d4-bcfd-ae8e82050c63
+		summarizeBy: none
+		sourceColumn: ID_Turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: 555c080f-7f28-481c-aeb4-3b96ce39e38c
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoraInicio
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 844a79d7-bfaa-4257-b87f-3caee8948b48
+		summarizeBy: none
+		sourceColumn: HoraInicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column HoraFin
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 96094000-3f39-40a2-855c-13dead7ab56a
+		summarizeBy: none
+		sourceColumn: HoraFin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column Operario_Responsable
+		dataType: string
+		lineageTag: 6f463a07-74f5-49d7-b252-7daeb83bebe9
+		summarizeBy: none
+		sourceColumn: Operario_Responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Turnos = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("Z:\MIS TRABAJOS\ADAMS PBI 27102026\PRODUCCION\datos\Dim_Turnos.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_Turno", type text}, {"Nombre", type text}, {"HoraInicio", type time}, {"HoraFin", type time}, {"Operario_Responsable", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,492 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "57a7c8530128b70a1eca",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 1068.3333333333335,
+    "width": 1908.3333333333335,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "INFORME DEL PROYECTO – ACEITES EXTREMADURA",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PARTE 2. PÁGINA PROCESADOS, DETALLES Y NAVEGACIÓN",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "7. Creación de la página Procesados",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A partir de la página Merma se crea una copia para mantener la misma estructura, los mismos filtros y la misma línea de diseño.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La nueva página se denomina ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "Procesados",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "En esta página se sustituyen los valores de merma por los kilogramos procesados en el gráfico de anillo y en la matriz. De esta forma, se mantiene una estructura equivalente en ambas páginas, pero se trabaja con una medida diferente.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "También se actualiza el título de la página para identificar correctamente su contenido.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "8. Creación de las páginas de detalle",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Para ampliar la información del dashboard se crean dos páginas adicionales, destinadas a consultar información más específica.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Detalle agregado",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se configura como página de obtención de detalles (",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "Drill-through",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontStyle": "italic",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "), utilizando el nombre de línea como campo de referencia.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se incorpora una matriz con:",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sección y línea en las filas.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Año y mes en las columnas.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Kilogramos totales de merma en los valores.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "listType": "bullet",
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Esta página permite consultar la evolución de la merma de las líneas correspondientes a la selección realizada en el dashboard.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Detalle",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se crea una segunda página de obtención de detalles, también vinculada al nombre de línea.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "En ella se incorpora una tabla con los registros individuales de producción y sus correspondientes datos: identificador, fecha, sección, línea, centro de coste, nave, responsables, turno, kilogramos procesados, kilogramos producidos, merma total y porcentaje de merma.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se ajustan los encabezados para facilitar su lectura y se configura el formato numérico de los campos de kilogramos con dos decimales.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "9. Configuración de la navegación",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se incorporan dos botones en la página Merma para acceder a las páginas de detalle.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La navegación utiliza la función de obtención de detalles (",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "Drill-through",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontStyle": "italic",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  },
+                  {
+                    "value": "). Para que funcione correctamente, primero se selecciona una línea en la matriz y después se utiliza el botón correspondiente.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "De esta forma, la selección realizada en la página principal se transmite a la página de detalle y permite consultar únicamente la información relacionada con esa línea.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se comprueba el funcionamiento de ambos accesos y la correspondencia de los registros mostrados.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "10. Comprobaciones finales",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se revisa que las páginas mantengan una estructura coherente, que las medidas utilizadas correspondan a cada análisis y que los filtros y la navegación funcionen correctamente.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "También se comprueba que los valores sin registros en determinados periodos permanezcan en blanco, en lugar de interpretarse como valores cero.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Con estas tareas queda construido un informe interactivo compuesto por las páginas principales de Merma y Procesados y las dos páginas complementarias de detalle.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "11. Acceso a los informes",
+                    "textStyle": {
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Se han incorporado botones de navegación en las páginas Merma y Procesados para facilitar el acceso a sus correspondientes explicaciones del proyecto. También se incluye un botón para regresar a la página principal de cada apartado.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "24pt",
+                      "color": "#e6e6e6"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Las páginas de detalle se mantienen ocultas y se accede a ellas mediante los botones específicos de obtención de detalles."
+                  }
+                ],
+                "indent": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

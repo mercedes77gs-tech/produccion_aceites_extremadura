@@ -1,0 +1,337 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9036f2f7db4dc20852e7",
+  "position": {
+    "x": 38.333333333333336,
+    "y": 76.666666666666671,
+    "z": 1000,
+    "height": 925,
+    "width": 1868.3333333333335,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "ID_Produccion"
+                }
+              },
+              "queryRef": "Fact_Produccion.ID_Produccion",
+              "nativeQueryRef": "ID_Produccion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "Fecha"
+                }
+              },
+              "queryRef": "Fact_Produccion.Fecha",
+              "nativeQueryRef": "Fecha"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Lineas"
+                    }
+                  },
+                  "Property": "Seccion"
+                }
+              },
+              "queryRef": "Dim_Lineas.Seccion",
+              "nativeQueryRef": "Seccion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_CentrosCoste"
+                    }
+                  },
+                  "Property": "Nombre"
+                }
+              },
+              "queryRef": "Dim_CentrosCoste.Nombre",
+              "nativeQueryRef": "Centro de Coste",
+              "displayName": "Centro de Coste"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Lineas"
+                    }
+                  },
+                  "Property": "Nombre"
+                }
+              },
+              "queryRef": "Dim_Lineas.Nombre",
+              "nativeQueryRef": "Lineas",
+              "displayName": "Lineas"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_CentrosCoste"
+                    }
+                  },
+                  "Property": "Nave"
+                }
+              },
+              "queryRef": "Dim_CentrosCoste.Nave",
+              "nativeQueryRef": "Nave"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_CentrosCoste"
+                    }
+                  },
+                  "Property": "Responsable"
+                }
+              },
+              "queryRef": "Dim_CentrosCoste.Responsable",
+              "nativeQueryRef": "Responsable"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Turnos"
+                    }
+                  },
+                  "Property": "Nombre"
+                }
+              },
+              "queryRef": "Dim_Turnos.Nombre",
+              "nativeQueryRef": "Turno",
+              "displayName": "Turno"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Turnos"
+                    }
+                  },
+                  "Property": "Operario_Responsable"
+                }
+              },
+              "queryRef": "Dim_Turnos.Operario_Responsable",
+              "nativeQueryRef": "Operario Responsable",
+              "displayName": "Operario Responsable"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "TOTAL KG PROCESADOS"
+                }
+              },
+              "queryRef": "Fact_Produccion.TOTAL KG PROCESADOS",
+              "nativeQueryRef": "KG Procesados",
+              "displayName": "KG Procesados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "KG PRODUCIDOS"
+                }
+              },
+              "queryRef": "Fact_Produccion.KG PRODUCIDOS",
+              "nativeQueryRef": "KG Producidos",
+              "displayName": "KG Producidos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "TOTAL KG MERMA"
+                }
+              },
+              "queryRef": "Fact_Produccion.TOTAL KG MERMA",
+              "nativeQueryRef": "Total KG Merma",
+              "displayName": "Total KG Merma"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Produccion"
+                    }
+                  },
+                  "Property": "MERMA %"
+                }
+              },
+              "queryRef": "Fact_Produccion.MERMA %",
+              "nativeQueryRef": "Merma %",
+              "displayName": "Merma %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_CentrosCoste"
+                  }
+                },
+                "Property": "Nave"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Calibri'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9CB549'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

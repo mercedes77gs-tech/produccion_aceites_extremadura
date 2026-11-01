@@ -1,0 +1,128 @@
+table Fact_Produccion
+	lineageTag: d0b34b09-2a42-4ee1-b472-223a1362936e
+
+	measure 'TOTAL KG PROCESADOS' = SUM(Fact_Produccion[KgEntrada])
+		formatString: #,0.00
+		lineageTag: a33bb4f9-acf7-4635-a5be-a3a6283c2018
+
+	measure 'TOTAL KG MERMA' = SUM(Fact_Produccion[Merma_Kg])
+		formatString: #,0.00
+		lineageTag: 765fc882-f617-491b-abd8-2b9d04ff2873
+
+	measure 'MERMA %' = DIVIDE([TOTAL KG MERMA],[TOTAL KG PROCESADOS],BLANK())
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8e303375-3c22-4b36-b693-674df8f683ab
+
+	measure 'KG PRODUCIDOS' = SUM(Fact_Produccion[KgSalida])
+		formatString: #,0.00
+		lineageTag: d80b9dc9-74a2-433e-92da-3cc3e971de3c
+
+	measure RENDIMIENTO_% = DIVIDE(Fact_Produccion[KG PRODUCIDOS],Fact_Produccion[TOTAL KG PROCESADOS],BLANK())
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: c08ecb6a-c1a0-4cbe-841b-393b21cbcfe1
+
+	measure 'MERMA % AñoAnterior' = CALCULATE([MERMA %],SAMEPERIODLASTYEAR(Calendario[Date]))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 035b5939-f611-433f-8f81-7a9e53ebae2d
+
+	measure '% DIF AÑO ANTERIOR EN MERMA' = [MERMA %]-[MERMA % AñoAnterior]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 564b836d-008a-4c64-9292-e89e2e13bc11
+
+	column ID_Produccion
+		dataType: string
+		lineageTag: 5026cecc-e362-4871-a43f-09db4670d232
+		summarizeBy: none
+		sourceColumn: ID_Produccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 949c50b9-78a9-4301-a101-a3cca2c24f51
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_Linea
+		dataType: string
+		lineageTag: ce5c6934-7e52-4a6a-b2b9-5e996f3d454a
+		summarizeBy: none
+		sourceColumn: ID_Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Turno
+		dataType: string
+		lineageTag: 063dd970-75d1-4e99-a683-4b93064dd9ef
+		summarizeBy: none
+		sourceColumn: ID_Turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_CentroCoste
+		dataType: string
+		lineageTag: 282c1416-3bca-4bfd-8706-3022a697061a
+		summarizeBy: none
+		sourceColumn: ID_CentroCoste
+
+		annotation SummarizationSetBy = Automatic
+
+	column KgEntrada
+		dataType: int64
+		formatString: #,0
+		lineageTag: d7a88552-c373-4423-a43e-050c9d673ed2
+		summarizeBy: sum
+		sourceColumn: KgEntrada
+
+		annotation SummarizationSetBy = Automatic
+
+	column KgSalida
+		dataType: int64
+		formatString: #,0
+		lineageTag: f835faed-4001-45b8-a10f-021f8c7e261f
+		summarizeBy: sum
+		sourceColumn: KgSalida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Merma_Kg
+		dataType: int64
+		formatString: #,0
+		lineageTag: e3fcbf5d-4d2b-4576-8b0f-07769daeb461
+		summarizeBy: sum
+		sourceColumn: Merma_Kg
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rendimiento %'
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 6b1fb286-c8cd-4164-990e-9ab44f80f7fc
+		summarizeBy: sum
+		sourceColumn: Rendimiento %
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Produccion = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("Z:\MIS TRABAJOS\ADAMS PBI 27102026\PRODUCCION\datos\Fact_Produccion.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Rendimiento_Pct", type number}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Rendimiento %", each [Rendimiento_Pct]/100),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"Rendimiento %", Percentage.Type}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado1",{"Rendimiento_Pct"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Columnas quitadas",{{"KgSalida", Int64.Type}, {"KgEntrada", Int64.Type}, {"Merma_Kg", Int64.Type}, {"Fecha", type date}})
+				in
+				    #"Tipo cambiado2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

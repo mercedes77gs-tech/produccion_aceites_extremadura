@@ -1,0 +1,56 @@
+table Dim_Lineas
+	lineageTag: 4ee19e05-312a-45d3-aa7c-bc4939f8063b
+
+	column ID_Linea
+		dataType: string
+		lineageTag: 2c3fde86-2d94-4e42-91a8-5b330d7651be
+		summarizeBy: none
+		sourceColumn: ID_Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: 99d54fda-c033-4863-9fa8-74d76bfbadfc
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Seccion
+		dataType: string
+		lineageTag: e314b3ee-18f5-4c26-adec-871e04c937e0
+		summarizeBy: none
+		sourceColumn: Seccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacidadKgDia
+		dataType: int64
+		formatString: #,0
+		lineageTag: 2319e86d-ac07-4a94-82d6-68917917ebaf
+		summarizeBy: none
+		sourceColumn: CapacidadKgDia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nave
+		dataType: string
+		lineageTag: d87c276b-00fc-4ae1-ac4a-4c0134987026
+		summarizeBy: none
+		sourceColumn: Nave
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Lineas = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("Z:\MIS TRABAJOS\ADAMS PBI 27102026\PRODUCCION\datos\Dim_Lineas.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_Linea", type text}, {"Nombre", type text}, {"Seccion", type text}, {"CapacidadKgDia", Int64.Type}, {"Nave", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

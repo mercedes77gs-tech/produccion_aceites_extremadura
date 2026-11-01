@@ -1,0 +1,78 @@
+table Calendario
+	lineageTag: d8cbddc1-6f8d-43fb-8f29-a008b734a8a0
+
+	measure 'Último Refresco' = ```
+			
+			"Último refresco: " & 
+			FORMAT(NOW(), "dd/MM/yyyy HH:mm")
+			
+			```
+		lineageTag: f4fba588-d281-4c9f-abf9-848e5c31b095
+
+	column Date
+		formatString: dd/mm/yyyy
+		lineageTag: ac4eea9e-a4c2-4646-bf00-3b19b5fa3765
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: e762f3a1-83d9-44eb-85a5-91f732db19a8
+			defaultHierarchy: LocalDateTable_14c75e5a-4a17-4c43-8273-4d645924d222.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column AÑO
+		formatString: 0
+		lineageTag: a5dd404c-6137-4e46-ba3f-2468e5a6fbb3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [AÑO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MES_LETRA
+		lineageTag: bd7c4b6b-3bf8-47b5-b79a-8b21b38839a5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MES_LETRA]
+		sortByColumn: MES_NUMERO
+
+		annotation SummarizationSetBy = Automatic
+
+	column MES_NUMERO
+		formatString: 0
+		lineageTag: 20f5dcdb-cc83-43a9-b185-dc126f30e65a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MES_NUMERO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRIMESTRE
+		lineageTag: 995b68a5-e2c4-4b6a-a379-591d1c5f19d1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [TRIMESTRE]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				ADDCOLUMNS(
+				        CALENDAR(MIN(Fact_Produccion[Fecha]),MAX(Fact_Produccion[Fecha])),
+				        "AÑO",YEAR([Date]),
+				        "MES_LETRA",FORMAT([DATE],"MMMM"),
+				        "MES_NUMERO",MONTH([Date]),
+				        "TRIMESTRE","T"&QUARTER([DATE]))
+				
+				```
+
+	annotation PBI_Id = f4db0349d293458180e70c9f4ed8989c
+
