@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "Proyecto_MERCEDES_GONZALEZ_SEGURA_EJERCICIO_PRODUCCION_ACEITE_OLIVA.Report"
+      }
+    }
+  ],
+  "settings": {
+    "enableAutoRecovery": true
+  }
+}
